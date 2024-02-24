@@ -29,7 +29,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
-
+"""
 config_list3 = [
     {
         "model": "gpt-3.5-turbo",
@@ -49,7 +49,46 @@ llm_config4 = {
     "config_list": config_list4,
     "temperature": 0.1,
 }
-
+"""
+"""
+20240219，此處列表更新為5類
+gpt35、gpt4、gpt4v、gemini、gemini_vision
+"""
+config_list_gpt35 = autogen.config_list_from_json(
+    "OAI_CONFIG_LIST",
+    filter_dict={
+        "model": ["gpt-3.5-turbo", "gpt-3.5-turbo-1106", "gpt-3.5-turbo-0613", "gpt-3.5-turbo-16k", "gpt-3.5-turbo-16k-0613"],
+    },
+)
+config_list_gpt4 = autogen.config_list_from_json(
+    "OAI_CONFIG_LIST",
+    filter_dict={
+        "model": ["gpt-4", "gpt-4-0613", "gpt-4-0314", "gpt-4-1106-preview"],
+    },
+)
+config_list_gpt4v = autogen.config_list_from_json(
+    "OAI_CONFIG_LIST",
+    filter_dict={
+        "model": ["gpt-4-vision-preview", "dalle"],
+    },
+)
+config_list_gemini = autogen.config_list_from_json(
+    "OAI_CONFIG_LIST",
+    filter_dict={
+        "model": ["gemini-pro"],
+    },
+)
+config_list_gemini_vision = autogen.config_list_from_json(
+    "OAI_CONFIG_LIST",
+    filter_dict={
+        "model": ["gemini-pro-vision"],
+    },
+)
+llm_config = {
+    "seed": 42,
+    "config_list": config_list_gemini,
+    "temperature": 0.1,
+}
 
 AGENT_TEAM = [
     user_proxy,
@@ -77,7 +116,7 @@ groupchat = ModifiedGroupChat(
     inject_agent_council=True,
     continue_chat=False,
 )
-manager = ModifiedGroupChatManager(groupchat=groupchat, llm_config=llm_config4)
+manager = ModifiedGroupChatManager(groupchat=groupchat, llm_config=llm_config)
 
 # NOTE: If the agents succussfully run their own autogen script, you will have to give it some time to process then press enter to exit the nested script.
 

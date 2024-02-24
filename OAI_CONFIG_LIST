@@ -1,0 +1,71 @@
+[
+    {
+        "model": "gpt-4",
+        "api_key": "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"
+    },
+    {
+        "model": "gpt-4-0613",
+        "api_key": "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"
+    },
+    {
+        "model": "gpt-4-0314",
+        "api_key": "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"
+    },
+    {
+        "model": "gpt-4-1106-preview",
+        "api_key": "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"
+    },
+    {
+        "model": "gpt-4-vision-preview",
+        "api_key": "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",
+        "api_version": "2023-06-01-preview"
+    },
+    {
+        "model": "gpt-3.5-turbo",
+        "api_key": "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",
+        "base_url": "https://tnrllmproxy.azurewebsites.net/v1",
+        "api_version": "2023-06-01-preview"
+    },
+    {
+        "model": "gpt-3.5-turbo-1106",
+        "api_key": "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"
+    },
+    {
+        "model": "gpt-3.5-turbo-0613",
+        "api_key": "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"
+    },
+    {
+        "model": "gpt-3.5-turbo-16k",
+        "api_key": "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"
+    },
+    {
+        "model": "gpt-3.5-turbo-16k-0613",
+        "api_key": "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"
+    },
+    {
+        "model": "dalle",
+        "api_key": "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",
+        "api_version": "2023-06-01-preview"
+    },
+    {
+        "model": "accounts/fireworks/models/qwen-72b-chat",
+        "api_key": "JbeI2PYOe82IOtkktdOfDYsAnlFA1UhAxzRvlt4duS5GpAzk",
+        "base_url": "https://api.fireworks.ai/inference/v1"
+    },
+    {
+        "model": "accounts/fireworks/models/mixtral-8x7b-instruct",
+        "api_key": "JbeI2PYOe82IOtkktdOfDYsAnlFA1UhAxzRvlt4duS5GpAzk",
+        "base_url": "https://api.fireworks.ai/inference/v1"
+    },
+    {
+        "model": "gemini-pro",
+        "api_key": "AIzaSyBaT6BXxeOlPOXbL01zC8317BW8RMHAA3w",
+        "api_type": "google"
+    },
+    {
+        "model": "gemini-pro-vision",
+        "api_key": "AIzaSyBaT6BXxeOlPOXbL01zC8317BW8RMHAA3w",
+        "api_type": "google"
+    }
+]
+
